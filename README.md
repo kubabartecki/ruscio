@@ -58,3 +58,10 @@ Run: `rustup update`
 `rustup 1.27.0`\
 `rustc 1.78.0`\
 `cargo 1.78.0`
+
+In next steps:\
+`rocket 0.5.0`
+
+## 4. Tutorial guide
+Staring from clean repo on branch `setup` follow tutorial by reading consecutive guides from `instructions` folder. \
+To check if you are doing right progress, each step will be archived on according branch.
