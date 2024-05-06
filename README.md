@@ -5,6 +5,7 @@ Welcome to Rust Rocket REST app tutorial, where we'll explore the powerful combi
 
 ## 2. Requirements
  - VS Code or other code editor
+ - Postman or other HTTP client
 
 ## 3. Rust installation
 We will need:

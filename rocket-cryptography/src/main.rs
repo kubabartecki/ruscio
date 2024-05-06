@@ -1,5 +1,7 @@
 #[macro_use] extern crate rocket;
 
+mod controllers;
+
 #[get("/")]
 fn index() -> &'static str {
     "Hello, world!"
@@ -7,5 +9,17 @@ fn index() -> &'static str {
 
 #[launch]
 fn rocket() -> _ {
-    rocket::build().mount("/", routes![index])
+    rocket::build()
+    .register("/", catchers![
+        controllers::error_controller::not_found,
+        controllers::error_controller::bad_input
+    ])
+    .mount("/", routes![index])
+    .mount("/", routes![
+        controllers::aes_controller::encrypt,
+        controllers::aes_controller::decrypt,
+        controllers::rsa_controller::encrypt,
+        controllers::rsa_controller::decrypt,
+        controllers::sha_controller::hash,
+    ])
 }
