@@ -8,3 +8,7 @@ rocket = { version = "0.5.0", features = ["json"] }
 serde = { version = "1.0", features = ["derive"] }
 aes-gcm = "0.10.3"
 hex = "0.4.3"
+rsa = "0.9.6"
+rand = "0.8"
+pkcs1 = "0.7.5"
+base64 = "0.22.1"
