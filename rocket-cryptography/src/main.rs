@@ -3,6 +3,8 @@
 mod controllers;
 mod models;
 mod services;
+mod config;
+mod schema;
 
 #[get("/")]
 fn index() -> &'static str {
@@ -24,5 +26,7 @@ fn rocket() -> _ {
         controllers::rsa_controller::encrypt,
         controllers::rsa_controller::decrypt,
         controllers::sha_controller::hash,
+        controllers::sha_controller::find_hex_digits,
+        controllers::sha_controller::get_hashes_by_digits,
     ])
 }
